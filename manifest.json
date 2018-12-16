@@ -29,7 +29,7 @@
     "commands": {
         "_execute_sidebar_action": {
             "suggested_key": {
-                "default": "Ctrl+Shift+U"
+                "default": "Shift+Alt+U"
             }
         }
     }
