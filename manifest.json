@@ -1,7 +1,7 @@
 {
 
     "manifest_version": 2,
-    "name": "Twitter Web Panel",
+    "name": "Twitter Sidebar",
     "description": "Displays mobile Twitter in the sidebar.",
     "version": "1.0",
     "applications": {
