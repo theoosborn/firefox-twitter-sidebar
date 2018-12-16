@@ -1,8 +1,8 @@
 {
 
     "manifest_version": 2,
-    "name": "Web Panels",
-    "description": "Displays custom websites in the sidebar.",
+    "name": "Twitter Web Panel",
+    "description": "Displays Twitter in the sidebar.",
     "version": "1.0",
     "applications": {
         "gecko": {
@@ -12,10 +12,10 @@
 
     "sidebar_action": {
         "default_title": "Twitter",
-        "default_panel": "sidebar/panel.html"
+        "default_panel": "https://mobile.twitter.com/home"
     },
 
-    "permissions": ["storage", "tabs"],
+    "permissions": ["tabs"],
 
     "commands": {
         "_execute_sidebar_action": {
