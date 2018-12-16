@@ -4,5 +4,24 @@
     "name": "Web Panels",
     "description": "Displays custom websites in the sidebar.",
     "version": "1.0",
+    "applications": {
+        "gecko": {
+          "strict_min_version": "54.0a1"
+        }
+    },
 
+    "sidebar_action": {
+        "default_title": "Twitter",
+        "default_panel": "sidebar/panel.html"
+    },
+
+    "permissions": ["storage", "tabs"],
+
+    "commands": {
+        "_execute_sidebar_action": {
+            "suggested_key": {
+                "default": "Ctrl+Shift+U"
+            }
+        }
+    }
 }
