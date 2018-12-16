@@ -23,8 +23,6 @@
         "48": "icons/icon_48.png",
         "96": "icons/icon_96.png"
       },
-    
-    "permissions": ["tabs"],
 
     "commands": {
         "_execute_sidebar_action": {
