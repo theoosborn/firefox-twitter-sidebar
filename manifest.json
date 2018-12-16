@@ -2,7 +2,7 @@
 
     "manifest_version": 2,
     "name": "Twitter Web Panel",
-    "description": "Displays Twitter in the sidebar.",
+    "description": "Displays mobile Twitter in the sidebar.",
     "version": "1.0",
     "applications": {
         "gecko": {
@@ -11,9 +11,18 @@
     },
 
     "sidebar_action": {
+        "default_icon": {
+            "48": "icons/icon_48.png",
+            "96": "icons/icon_96.png"
+          },
         "default_title": "Twitter",
         "default_panel": "index.html"
     },
+
+    "icons": {
+        "48": "icons/icon_48.png",
+        "96": "icons/icon_96.png"
+      },
 
     "permissions": ["tabs"],
 
