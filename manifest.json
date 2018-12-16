@@ -12,7 +12,7 @@
 
     "sidebar_action": {
         "default_title": "Twitter",
-        "default_panel": "https://mobile.twitter.com/home"
+        "default_panel": "index.html"
     },
 
     "permissions": ["tabs"],
