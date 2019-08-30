@@ -16,7 +16,7 @@
             "96": "icons/icon1_96.png"
           },
         "default_title": "Twitter",
-        "default_panel": "index.html"
+        "default_panel": "sidebar/panel.html"
     },
 
     "icons": {
