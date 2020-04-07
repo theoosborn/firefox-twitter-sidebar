@@ -6,15 +6,20 @@
     "version": "1.3",
     "applications": {
         "gecko": {
-          "strict_min_version": "54.0a1"
+          "strict_min_version": "60.0"
         }
     },
 
+    "options_ui": {
+		"page": "options/options.html",
+		"browser_style": true
+    },
+
     "sidebar_action": {
-        "default_icon": {
-            "48": "icons/icon1_48.png",
-            "96": "icons/icon1_96.png"
-          },
+		"default_icon": {
+			"48": "icons/icon1_48.png",
+			"96": "icons/icon1_96.png"
+        },
         "default_title": "Twitter",
         "default_panel": "sidebar/panel.html"
     },
@@ -22,13 +27,17 @@
     "icons": {
         "48": "icons/icon2_48.png",
         "96": "icons/icon2_96.png"
-      },
+		},
+
+    "optional_permissions": [ "storage" ],
+
 
     "commands": {
         "_execute_sidebar_action": {
             "suggested_key": {
                 "default": "Shift+Alt+U"
-            }
+            },
+            "description": "Toggle the Twitter sidebar"
         }
     }
 }
