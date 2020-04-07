@@ -1,61 +1,32 @@
-function saveOptions(e) {
-  browser.storage.sync.set({
-    tweetdeck: document.querySelector("#tweetdeck").value
-  });
-  e.preventDefault();
-}
+const sidebarToggle = '_execute_sidebar_action';
 
-function restoreOptions() {
-  var storageItem = browser.storage.managed.get('tweetdeck');
-  storageItem.then((res) => {
-    document.querySelector
-  })
-}
-
-// Options for Tweetdeck
-function updatePermissions() {
-  browser.permissions.getAll()
-  .then((permissions) => {
-    document.getElementById('permissions').innerText = permissions.permissions.join(', ');
-  });
-}
-
-async function processChange(event) {
-  let permission = event.target.dataset.permission;
-  let result = document.getElementById('result');
-
-  try {
-    if (event.target.dataset.action === 'grant') {
-      browser.permissions.request({permissions: [permission]})
-      .then((response) => {
-        result.className = 'bg-success';
-        result.textContent = 'Call successful.';
-      })
-      .catch((err) => {
-        // Catch the case where the permission cannot be granted.
-        result.className = 'bg-warning';
-        result.textContent = err.message;
-      });
+// Update UI and set value of textbox
+async function updateUI() {
+  let commands = await browser.commands.getAll();
+  for (command of commands) {
+    if (command.name === sidebarToggle) {
+      document.querySelector('#shortcut').value = command.shortcut;
     }
-    else {
-      browser.permissions.remove({permissions: [permission]})
-      .then((response) => {
-        result.className = 'bg-success';
-        result.textContent = 'Call successful.';
-      });
-    }
-  } catch(err) {
-    // Catch the case where the permission is completely wrong.
-    result.className = 'bg-danger';
-    result.textContent = err.message;
   }
-  result.style.display = 'block';
-  updatePermissions();
-  event.preventDefault();
 }
 
-for (let element of document.getElementsByClassName('permission')) {
-  element.addEventListener('click', processChange);
+// Update shortcut to value of textbox
+async function updateShortcut() {
+  await browser.commands.update({
+    name: sidebarToggle,
+    shortcut: document.querySelector('#shortcut').value
+  });
 }
 
-updatePermissions();
+// Reset shortcut and update textbox
+async function resetShortcut() {
+  await browser.commands.reset(sidebarToggle);
+  updateUI();
+}
+
+// Update UI on page load
+document.addEventListener('DOMContentLoaded', updateUI);
+
+// Act on update and reset buttons
+document.querySelector('#update').addEventListener('click', updateShortcut)
+document.querySelector('#reset').addEventListener('click', resetShortcut)

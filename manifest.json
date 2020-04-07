@@ -29,9 +29,6 @@
         "96": "icons/icon2_96.png"
 		},
 
-    "optional_permissions": [ "storage" ],
-
-
     "commands": {
         "_execute_sidebar_action": {
             "suggested_key": {
