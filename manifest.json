@@ -1,14 +1,25 @@
 {
-
+	"background": {
+		"scripts": ["background.js"]
+	},
+	"browser_action": {
+		"default_title": "Twitter Sidebar"
+	},
     "manifest_version": 2,
     "name": "Twitter Sidebar",
     "description": "Displays mobile Twitter in the sidebar.",
     "version": "1.4",
     "applications": {
         "gecko": {
-          "strict_min_version": "60.0"
+			"strict_min_version": "60.0"
         }
     },
+	
+	"browser_specific_settings": {
+		"gecko": {
+			"id": "{01cf6ad3-4729-433b-a430-2748b01f508a}"
+		}
+	},
 
     "options_ui": {
 		"page": "options/options.html",
@@ -21,6 +32,7 @@
 			"96": "icons/icon1_96.png"
         },
         "default_title": "Twitter",
+		"browser_style": false,
         "default_panel": "sidebar/panel.html"
     },
 
@@ -28,7 +40,9 @@
         "48": "icons/icon2_48.png",
         "96": "icons/icon2_96.png"
 		},
-
+	
+	"permissions": [ "storage" ],
+	
     "commands": {
         "_execute_sidebar_action": {
             "suggested_key": {
