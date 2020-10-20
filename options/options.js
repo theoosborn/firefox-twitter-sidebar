@@ -3,7 +3,7 @@ const sidebarToggle = '_execute_sidebar_action';
 // Update UI and set value of textbox
 async function updateUI() {
   let commands = await browser.commands.getAll();
-  for (command of commands) {
+  for (var command of commands) {
     if (command.name === sidebarToggle) {
       document.querySelector('#shortcut').value = command.shortcut;
     }
