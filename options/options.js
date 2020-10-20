@@ -28,5 +28,5 @@ async function resetShortcut() {
 document.addEventListener('DOMContentLoaded', updateUI);
 
 // Act on update and reset buttons
-document.querySelector('#update').addEventListener('click', updateShortcut)
-document.querySelector('#reset').addEventListener('click', resetShortcut)
+document.querySelector('#update').addEventListener('click', updateShortcut);
+document.querySelector('#reset').addEventListener('click', resetShortcut);
