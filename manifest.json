@@ -36,7 +36,7 @@
     "icons": {
         "48": "icons/icon2_48.png",
         "96": "icons/icon2_96.png"
-		},
+	},
 	
 	"permissions": [ "storage" ],
 	
