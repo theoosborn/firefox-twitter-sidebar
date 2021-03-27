@@ -2,15 +2,15 @@
 	"background": {
 		"scripts": ["background.js"]
 	},
-    "manifest_version": 2,
-    "name": "Twitter Sidebar",
-    "description": "Displays mobile Twitter in the sidebar.",
-    "version": "1.4",
-    "applications": {
-        "gecko": {
+	"manifest_version": 2,
+	"name": "Twitter Sidebar",
+	"description": "Displays mobile Twitter in the sidebar.",
+	"version": "1.4",
+	"applications": {
+		"gecko": {
 			"strict_min_version": "60.0"
-        }
-    },
+		}
+	},
 	
 	"browser_specific_settings": {
 		"gecko": {
@@ -18,34 +18,34 @@
 		}
 	},
 
-    "options_ui": {
+	"options_ui": {
 		"page": "options/options.html",
 		"browser_style": true
-    },
+	},
 
-    "sidebar_action": {
+	"sidebar_action": {
 		"default_icon": {
 			"48": "icons/icon1_48.png",
 			"96": "icons/icon1_96.png"
-        },
-        "default_title": "Twitter",
+		},
+		"default_title": "Twitter",
 		"browser_style": false,
-        "default_panel": "sidebar/panel.html"
-    },
+		"default_panel": "sidebar/panel.html"
+	},
 
-    "icons": {
-        "48": "icons/icon2_48.png",
-        "96": "icons/icon2_96.png"
+	"icons": {
+		"48": "icons/icon2_48.png",
+		"96": "icons/icon2_96.png"
 	},
 	
 	"permissions": [ "storage" ],
 	
-    "commands": {
-        "_execute_sidebar_action": {
-            "suggested_key": {
-                "default": "Shift+Alt+U"
-            },
-            "description": "Toggle the Twitter sidebar"
-        }
-    }
+	"commands": {
+		"_execute_sidebar_action": {
+			"suggested_key": {
+				"default": "Shift+Alt+U"
+			},
+			"description": "Toggle the Twitter sidebar"
+		}
+	}
 }
