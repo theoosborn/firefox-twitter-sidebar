@@ -4,3 +4,5 @@ firefox-twitter-sidebar.zip
 .DS_Store
 .web-extension-id
 web-ext-artifacts/
+*.sublime-project
+*.sublime-workspace
