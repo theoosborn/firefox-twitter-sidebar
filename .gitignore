@@ -2,3 +2,5 @@ logo.xcf
 firefox-twitter-sidebar.zip
 .jshintrc
 .DS_Store
+.web-extension-id
+web-ext-artifacts/
