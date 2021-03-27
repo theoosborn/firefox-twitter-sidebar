@@ -24,8 +24,7 @@ function updateSettings(e) {
   e.preventDefault();
 }
 
-// Reset shortcut and update textbox
-function resetShortcut() {
+function resetSettings() {
   browser.commands.reset(sidebarToggle);
   browser.storage.sync.clear();
   updateUI();
@@ -36,4 +35,4 @@ document.addEventListener('DOMContentLoaded', updateUI);
 
 // Act on update and reset buttons
 document.querySelector('#update').addEventListener('click', updateSettings);
-document.querySelector('#reset').addEventListener('click', resetShortcut);
+document.querySelector('#reset').addEventListener('click', resetSettings);
