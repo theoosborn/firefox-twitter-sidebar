@@ -3,34 +3,39 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<style>
+			.flex {
+				display: flex;
+			}
+
+			.flex-child {
+				flex: 1 1 auto;
+			}
+
+			button {
+				max-width: 132px;
+				margin-right: 5px;
+			}
+		</style>
 	</head>
 
 	<body>
-		<form>
-			<div class="panel-section panel-section-formElements">
-				<div class="panel-formElements-item">
-					<label>Keyboard shortcut to open Twitter in the sidebar
-						<div class="browser-style">
-							<input type="text" id="shortcut" />
-						</div>
-					</label>
-				</div>			
-				<div class="panel-formElements-item">
-					<label>Use Tweetdeck instead of Twitter
-						<div class="browser-style">
-							<input type="checkbox" id="tweetdeck" />
-						</div>
-					</label>
-				</div>	
-				<div class="panel-formElements-item">
-					<button type="submit" class="browser-style panel-section-footer-button default" id="update">
-						Update
-					</button>
-					<div class="panel-section-footer-separator"></div>
-					<button class="browser-style panel-section-footer-button" id="reset">Reset to default</button>
-				</div>
-			</div>
-		</form>
+		<div class="browser-style">
+			<label for="shortcut">Keyboard shortcut to open Twitter in the sidebar</label>
+			<input type="text" id="shortcut" />
+		</div>
+		<div class="browser-style">
+			<input type="checkbox" id="tweetdeck" />
+			<label style="vertical-align: middle;" for="tweetdeck">
+				Use Tweetdeck instead of Twitter (warning: not all features may not function correctly)
+			</label>
+		</div>
+		<div class="flex">
+			<button type="submit" class="browser-style default flex-child" id="update">
+				Update
+			</button>
+			<button class="browser-style flex-child" id="reset">Reset to default</button>
+		</div>
 		<script src="options.js"></script>
 	</body>
 
