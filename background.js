@@ -1,23 +1,9 @@
 sidebarProfiles = {
-	twitter: {
-		title: "Twitter",
-		icons: {
-			48: "icons/icon1_48.png",
-			96: "icons/icon1_96.png"
-		},
-		url: "https://mobile.twitter.com"
-	},
-	tweetdeck: {
-		title: "Tweetdeck",
-		icons: {
-			48: "icons/icon3_48.png",
-			96: "icons/icon3_96.png"
-		},
-		url: "https://tweetdeck.twitter.com"
-	}
+	twitter: "https://mobile.twitter.com",
+	tweetdeck: "https://tweetdeck.twitter.com"
 }
 
-function changeProfile(changes, areaName) {
+function changeProfile() {
 	browser.storage.sync.get("tweetdeck").then((res) => {
 		if (res.tweetdeck === true) {
 			setSidebarAttributes(sidebarProfiles.tweetdeck)
@@ -29,10 +15,8 @@ function changeProfile(changes, areaName) {
 
 function setSidebarAttributes(profile) {
 	browser.sidebarAction.getPanel({}).then((value) => {
-		if (value !== profile.url) {
-			browser.sidebarAction.setPanel({panel: profile.url})
-			browser.sidebarAction.setTitle({title: profile.title})
-			browser.sidebarAction.setIcon({path: profile.icons})
+		if (value !== profile) {
+			browser.sidebarAction.setPanel({panel: profile})
 		}
 	})
 }
