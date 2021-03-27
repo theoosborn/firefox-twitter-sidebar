@@ -6,15 +6,11 @@
 	"name": "Twitter Sidebar",
 	"description": "Displays mobile Twitter in the sidebar.",
 	"version": "1.5",
-	"applications": {
-		"gecko": {
-			"strict_min_version": "60.0"
-		}
-	},
 	
 	"browser_specific_settings": {
 		"gecko": {
-			"id": "{01cf6ad3-4729-433b-a430-2748b01f508a}"
+			"id": "{01cf6ad3-4729-433b-a430-2748b01f508a}",
+			"strict_min_version": "60.0"
 		}
 	},
 
