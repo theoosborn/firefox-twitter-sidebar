@@ -1,20 +1,42 @@
 <!DOCTYPE html>
 
 <html>
-  <head>
-    <meta charset="utf-8">
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			.flex {
+				display: flex;
+			}
 
-  <body>
-    <form>
-      <label>Keyboard shortcut to open Todoist in the sidebar</label>
-      <div class="browser-style">
-        <input type="text" id="shortcut" >
-      </div>
-      <button class="browser-style" id="update">Update</button>
-      <button class="browser-style" id="reset">Reset to default</button>
-    </form>
-  <script src="options.js"></script>
-  </body>
+			.flex-child {
+				flex: 1 1 auto;
+			}
+
+			button {
+				max-width: 132px;
+				margin-right: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="browser-style">
+			<label for="shortcut">Keyboard shortcut to open Twitter in the sidebar</label>
+			<input type="text" id="shortcut" />
+		</div>
+		<div class="browser-style">
+			<input type="checkbox" id="tweetdeck" />
+			<label style="vertical-align: middle;" for="tweetdeck">
+				Use Tweetdeck instead of Twitter (warning: not all features may not function correctly)
+			</label>
+		</div>
+		<div class="flex">
+			<button type="submit" class="browser-style default flex-child" id="update">
+				Update
+			</button>
+			<button class="browser-style flex-child" id="reset">Reset to default</button>
+		</div>
+		<script src="options.js"></script>
+	</body>
 
 </html>
